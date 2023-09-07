@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class javaerrors {
+public class Main {
   public static void main(String[] args) {
     System.setProperty("console.encoding", "UTF-8"); // Устанавливаем кодировку консоли в UTF-8
     Scanner scanner = new Scanner(System.in); // Scanner для считывания ввода с клавиатуры
     System.out.println("Введите информацию: "); // Предложение для пользователя
-    String info = Scanner.nextLine(); // Считываем введенную строку
+    String info = scanner.nextLine(); // Считываем введенную строку
 
 
     String[] userData = check(info); // Проверяем введенные данные с помощью метода check()
@@ -19,7 +19,7 @@ public class javaerrors {
       String lastName = userData[0];
       saveDataToFile(lastName, userData);
     }
-    Scanner.close(); // Закрываем Scanner
+    scanner.close(); // Закрываем Scanner
 
   }
 
@@ -97,3 +97,4 @@ public class javaerrors {
       e.printStackTrace();
     }
   }
+}
